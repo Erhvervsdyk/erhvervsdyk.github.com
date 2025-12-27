@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, PanInfo } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import imgImage4 from "figma:asset/9d4b21b0c5896ab23adadb7a0f39c82b982778a1.png";
-import imgUnderwaterWelding from "figma:asset/8b3482bdb980472bb8378b059634305cd969f8a1.png";
-import imgSalvage from "figma:asset/ffd426342de792e7d150443b56de2b3290dd3c55.png";
-import imgSalvage2 from "figma:asset/7368453835299b8c02faf8ff24309e125aaece57.png";
-import imgSalvage3 from "figma:asset/4d0c4e4988ea59ac5f0449521aca70f4027ff1b8.png";
-import imgPort from "figma:asset/6d3a856335b9229bd4fba24a067b274d2012e3f4.png";
-import imgHelsingor from "figma:asset/445967e20d48e0ba93f8a7206f5483a6f6402255.png";
-import imgHelsingor2 from "figma:asset/f2a4f473804fef288ba24f2e27488338f6f0d836.png";
-import svgPaths from "../imports/svg-wx2a8d09gh";
+import imgCaseA01 from "@/assets/case-a-01.avif";
+import imgCaseB01 from "@/assets/case-b-01.avif";
+import imgCaseB02 from "@/assets/case-b-02.avif";
+import imgCaseB03 from "@/assets/case-b-03.avif";
+import imgCaseC01 from "@/assets/case-c-01.avif";
+import imgCaseD01 from "@/assets/case-c-01.avif";
+import imgCaseD02 from "@/assets/case-d-01.avif";
+import imgCaseD03 from "@/assets/case-d-02.avif";
+import svgPaths from "@/assets/case-d-03.avif";
 
 function ArrowRight() {
   return (
     <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-      <path 
-        d={svgPaths.p3b6ad300} 
-        stroke="#CECFD2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
-        strokeWidth="1.67" 
+      <path
+        d={svgPaths.p3b6ad300}
+        stroke="#CECFD2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.67"
       />
     </svg>
   );
@@ -32,23 +32,26 @@ export function Cases() {
   const cases = [
     {
       title: "Tilstandsrapport for Stigsnæs Havn",
-      description: "Udearbejdet for Slagelse kommune, tilsyn WSP. Alle elementer i havnen er gennemgået, tykkelse målt og dokumenteret. Efterfølgende rapport med forslag til forbedringer.",
-      images: [imgImage4],
+      description:
+        "Udearbejdet for Slagelse kommune, tilsyn WSP. Alle elementer i havnen er gennemgået, tykkelse målt og dokumenteret. Efterfølgende rapport med forslag til forbedringer.",
+      images: [imgCaseA01],
     },
     {
       title: "Anoder i Helsingør Havn",
-      description: "Opsætning af anoder i Helsingør Havn i samarbejde med Niras.",
-      images: [imgPort, imgHelsingor, imgHelsingor2],
+      description:
+        "Opsætning af anoder i Helsingør Havn i samarbejde med Niras.",
+      images: [imgCaseB01, imgCaseB02, imgCaseB03],
     },
     {
       title: "Københavns Kommune",
       description: "Udbedring af skader på badezone for Københavns Kommune.",
-      images: [imgUnderwaterWelding],
+      images: [imgCaseC01],
     },
     {
       title: "Bjærgning af skib på Refshalevej",
-      description: "Inspektion efter forlis, afpropning af skib og miljøhensyn. Efterfølgende bjærgning af skib. ",
-      images: [imgSalvage, imgSalvage2, imgSalvage3],
+      description:
+        "Inspektion efter forlis, afpropning af skib og miljøhensyn. Efterfølgende bjærgning af skib. ",
+      images: [imgCaseD01, imgCaseD02, imgCaseD03],
     },
   ];
 
@@ -69,11 +72,16 @@ export function Cases() {
     e?.stopPropagation();
     const currentImages = cases[activeIndex].images;
     if (currentImages.length > 1) {
-      setActiveImageIndex((prev) => (prev - 1 + currentImages.length) % currentImages.length);
+      setActiveImageIndex(
+        (prev) => (prev - 1 + currentImages.length) % currentImages.length
+      );
     }
   };
 
-  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const handleDragEnd = (
+    event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
     const threshold = 50;
     if (info.offset.x < -threshold) {
       handleNextImage();
@@ -83,9 +91,12 @@ export function Cases() {
   };
 
   return (
-    <section id="cases" className="w-full max-w-[1440px] px-8 py-24 flex flex-col gap-16 bg-[linear-gradient(180deg,#0A1F2F_0%,#09101E_100%)]">
+    <section
+      id="cases"
+      className="w-full max-w-[1440px] px-8 py-24 flex flex-col gap-16 bg-[linear-gradient(180deg,#0A1F2F_0%,#09101E_100%)]"
+    >
       {/* Header */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -101,12 +112,14 @@ export function Cases() {
           </h2>
         </div>
         <p className="font-['Inter'] font-normal text-[18px] md:text-[20px] leading-[30px] text-[#94969c]">
-          Fra komplekse inspektioner til akutte bjærgninger. Få et indblik i vores hverdag og se, hvordan vi løser krævende udfordringer for vores kunder.
+          Fra komplekse inspektioner til akutte bjærgninger. Få et indblik i
+          vores hverdag og se, hvordan vi løser krævende udfordringer for vores
+          kunder.
         </p>
       </motion.div>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -118,9 +131,9 @@ export function Cases() {
           <AnimatePresence mode="popLayout">
             {cases.map((item, caseIndex) => {
               if (caseIndex !== activeIndex) return null;
-              
+
               const currentImage = item.images[activeImageIndex];
-              
+
               return (
                 <motion.div
                   key={`${caseIndex}-${activeImageIndex}`}
@@ -175,8 +188,8 @@ export function Cases() {
                     setActiveImageIndex(dotIndex);
                   }}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    activeImageIndex === dotIndex 
-                      ? "bg-white w-4" 
+                    activeImageIndex === dotIndex
+                      ? "bg-white w-4"
                       : "bg-white/50 hover:bg-white/80"
                   }`}
                   aria-label={`Go to image ${dotIndex + 1}`}
@@ -189,10 +202,12 @@ export function Cases() {
         {/* Tabs Side */}
         <div className="w-full lg:w-1/2 flex flex-col gap-0">
           {cases.map((item, index) => (
-            <div 
+            <div
               key={index}
               onClick={() => handleCaseClick(index)}
-              className={`relative pl-6 py-4 flex flex-col gap-5 border-l-4 border-[#1f242f] cursor-pointer transition-colors hover:bg-white/5 ${activeIndex === index ? "bg-white/5" : ""}`}
+              className={`relative pl-6 py-4 flex flex-col gap-5 border-l-4 border-[#1f242f] cursor-pointer transition-colors hover:bg-white/5 ${
+                activeIndex === index ? "bg-white/5" : ""
+              }`}
             >
               {activeIndex === index && (
                 <motion.div

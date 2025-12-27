@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import imgHeroHeaderSection from "@/assets/ea6a9ac087d0c6fc6c683e8af186cf099e62f9c6.png";
+import imgHeroHeaderSection from "@/assets/hero_header.webp";
 import { Button } from "./ui/button";
 
 export function Hero() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import imgMockupWrap from "figma:asset/46a03d25a56bc12940ca54182cc8da0012269eda.png";
+import imgMockupWrap from "@/assets/safety.avif";
 
 export function Safety() {
   return (
@@ -18,28 +18,24 @@ export function Safety() {
         </h2>
         <div className="font-['Inter'] font-normal text-[18px] leading-[28px] text-[#cecfd2] space-y-5">
           <p>
-            Hos Dykerhverv er kompromisløs sikkerhed fundamentet
-            for alle vores opgaver. Arbejde under vand indebærer
-            altid risici, og derfor er vores procedurer og
-            udstyr altid godkendt og regelmæssigt synet af
-            Søfartsstyrelsen. Alt arbejde udføres i henhold til
-            gældende dansk lovgivning og de højeste
-            internationale standarder for erhvervsdykning. Vores
-            dykkere er desuden rutineret i dykkerrelateret
-            førstehjælp og er konstant trænet til at håndtere
+            Hos Dykerhverv er kompromisløs sikkerhed fundamentet for alle vores
+            opgaver. Arbejde under vand indebærer altid risici, og derfor er
+            vores procedurer og udstyr altid godkendt og regelmæssigt synet af
+            Søfartsstyrelsen. Alt arbejde udføres i henhold til gældende dansk
+            lovgivning og de højeste internationale standarder for
+            erhvervsdykning. Vores dykkere er desuden rutineret i
+            dykkerrelateret førstehjælp og er konstant trænet til at håndtere
             uforudsete situationer.
           </p>
           <p>
-            Vi arbejder proaktivt for at sikre et trygt
-            arbejdsmiljø – både over og under vand. Alle
-            projekter starter med en detaljeret
-            Arbejdspladsvurdering (APV) for at identificere og
-            eliminere potentielle farer. Derudover afholdes der
-            altid et "Toolbox-møde" før opstart, hvor alle
-            involverede koordinerer arbejdsgange, risici og
-            sikkerhedsprotokoller. Denne systematiske tilgang
-            sikrer maksimal tryghed for vores medarbejdere og
-            minimal risiko for vores kunder gennem hele opgaven.
+            Vi arbejder proaktivt for at sikre et trygt arbejdsmiljø – både over
+            og under vand. Alle projekter starter med en detaljeret
+            Arbejdspladsvurdering (APV) for at identificere og eliminere
+            potentielle farer. Derudover afholdes der altid et "Toolbox-møde"
+            før opstart, hvor alle involverede koordinerer arbejdsgange, risici
+            og sikkerhedsprotokoller. Denne systematiske tilgang sikrer maksimal
+            tryghed for vores medarbejdere og minimal risiko for vores kunder
+            gennem hele opgaven.
           </p>
         </div>
       </motion.div>
