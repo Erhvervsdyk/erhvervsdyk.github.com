@@ -24,7 +24,7 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Disable Jekyll
-        run: touch dist/.nojekyll
+        run: touch build/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
