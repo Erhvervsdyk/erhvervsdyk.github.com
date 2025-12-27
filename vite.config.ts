@@ -4,9 +4,10 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "",
   build: {
-    outDir: "build", // Ensure this matches your current setup
+    outDir: "build",
+    target: "esnext",
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
