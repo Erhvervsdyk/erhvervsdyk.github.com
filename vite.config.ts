@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/erhvervsdyk.github.com/",
+  base: "/",
   build: {
     outDir: "build", // Ensure this matches your current setup
   },
