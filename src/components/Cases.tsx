@@ -6,9 +6,9 @@ import imgCaseB01 from "@/assets/case-b-01.avif";
 import imgCaseB02 from "@/assets/case-b-02.avif";
 import imgCaseB03 from "@/assets/case-b-03.avif";
 import imgCaseC01 from "@/assets/case-c-01.avif";
-import imgCaseD01 from "@/assets/case-c-01.avif";
-import imgCaseD02 from "@/assets/case-d-01.avif";
-import imgCaseD03 from "@/assets/case-d-02.avif";
+import imgCaseD01 from "@/assets/case-d-01.avif";
+import imgCaseD02 from "@/assets/case-d-02.avif";
+import imgCaseD03 from "@/assets/case-d-03.avif";
 import svgPaths from "@/assets/case-d-03.avif";
 
 function ArrowRight() {
