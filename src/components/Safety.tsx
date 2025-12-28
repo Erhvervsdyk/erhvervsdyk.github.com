@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import imgMockupWrap from "@/assets/safety.avif";
+import imgSafety from "@/assets/safety.avif";
 
 export function Safety() {
   return (
@@ -50,8 +50,8 @@ export function Safety() {
       >
         <div className="relative w-full h-full overflow-hidden rounded-lg">
           <img
-            src={imgMockupWrap}
-            alt="Safety Crane Operation"
+            src={imgSafety}
+            alt="Et industrielt havneområde ved solnedgang med store byggekraner og containere på en pram. Himlen er farvet i gyldne nuancer, hvilket skaber et overblik over en professionelt organiseret arbejdsplads ved vandet."
             className="w-full h-full object-cover"
           />
         </div>

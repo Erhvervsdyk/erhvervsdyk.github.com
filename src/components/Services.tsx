@@ -20,17 +20,23 @@ const servicesList = [
   "Opsætning af anoder",
 ];
 
-function CheckIcon() {
+function CheckIcon({ className }: { className?: string }) {
   return (
-    <div className="relative shrink-0 w-7 h-7">
-      <svg className="block w-full h-full" fill="none" viewBox="0 0 28 28">
-        <path
-          d={svgPaths.p12dd8dc0}
-          stroke="#00CECE"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-        />
+    <div className={`shrink-0 w-6 h-6 ${className || ""}`}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#00CECE"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="block w-full h-full icon icon-tabler"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M5 12l5 5l10 -10" />
       </svg>
     </div>
   );
@@ -78,7 +84,7 @@ export function Services() {
           <div className="relative w-full h-full overflow-hidden rounded-lg">
             <img
               src={imgImage1}
-              alt="Diver working"
+              alt="En professionel erhvervsdykker udfører undervandssvejsning eller skæring på en stor metalpille. Dykkersættet er fuldt udstyret, og kraftige gnister lyser det mørke havvand op omkring arbejdsområdet."
               className="w-full h-full object-cover"
             />
           </div>
@@ -95,7 +101,7 @@ export function Services() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               className="flex gap-3 items-start"
             >
-              <CheckIcon />
+              <CheckIcon className="mt-1" />
               <p
                 className={`font-['Inter'] text-[18px] leading-[28px] ${
                   index < 4

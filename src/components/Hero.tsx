@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <img
           src={imgHeroHeaderSection}
-          alt="Hero Background"
+          alt="Professionel erhvervsdykker udfører præcisionsarbejde under vandet med skærebrænder. De skarpe gnister lyser op i det mørke vand og demonstrerer ekspertise inden for teknisk krævende undervandsopgaver."
           className="w-full h-full object-cover"
         />
         <div

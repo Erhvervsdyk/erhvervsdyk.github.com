@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import imgContactImage from "@/assets/contact.avif";
+import imgContact from "@/assets/contact.avif";
 import { MapPin, Phone, Mail, FileText, User } from "lucide-react";
 
 export function Contact() {
@@ -109,8 +109,8 @@ export function Contact() {
       >
         <div className="w-full h-full rounded-lg overflow-hidden">
           <img
-            src={imgContactImage}
-            alt="Contact Diver"
+            src={imgContact}
+            alt="Erhvervsdykker Rune Teit Strøm står klar i vandet til rådgivning om din næste undervandsopgave."
             className="w-full h-full object-cover"
           />
         </div>

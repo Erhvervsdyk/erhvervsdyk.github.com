@@ -13,15 +13,18 @@ import svgPaths from "@/assets/case-d-03.avif";
 
 function ArrowRight() {
   return (
-    <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-      <path
-        d={svgPaths.p3b6ad300}
-        stroke="#CECFD2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.67"
-      />
-    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="#CECFD2"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-5 h-5 icon icon-tabler"
+    ></svg>
   );
 }
 
