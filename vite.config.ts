@@ -4,12 +4,26 @@ import path from "path";
 import sitemap from "vite-plugin-sitemap";
 
 export default defineConfig({
+  server: {
+    port: 3000,
+    strictPort: true,
+    hmr: {
+      protocol: "ws",
+      host: "localhost",
+      port: 3000,
+    },
+  },
+  preview: {
+    port: 3000,
+    strictPort: true,
+  },
   plugins: [
     react(),
     sitemap({
       hostname: "https://erhvervsdyk.dk",
       dynamicRoutes: ["/"],
       outDir: "build",
+      generateRobotsTxt: true,
     }),
   ],
   base: "./",
@@ -117,9 +131,5 @@ export default defineConfig({
       "@radix-ui/react-accordion@1.2.3": "@radix-ui/react-accordion",
       "@": path.resolve(__dirname, "./src"),
     },
-  },
-  server: {
-    port: 3000,
-    open: true,
   },
 });

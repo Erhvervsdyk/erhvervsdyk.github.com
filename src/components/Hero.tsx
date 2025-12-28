@@ -12,6 +12,8 @@ export function Hero() {
           src={imgHeroHeaderSection}
           alt="Professionel erhvervsdykker udfører præcisionsarbejde under vandet med skærebrænder. De skarpe gnister lyser op i det mørke vand og demonstrerer ekspertise inden for teknisk krævende undervandsopgaver."
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
         />
         <div
           className="absolute inset-0 pointer-events-none"
