@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import imgHeroHeaderSection from "@/assets/hero_header.webp";
+import imgHeroHeaderSection from "@/assets/hero.avif";
 import { Button } from "./ui/button";
 
 export function Hero() {
