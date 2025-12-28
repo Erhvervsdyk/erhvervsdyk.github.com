@@ -9,6 +9,7 @@ export default defineConfig({
     sitemap({
       hostname: "https://erhvervsdyk.dk",
       dynamicRoutes: ["/"],
+      outDir: "build",
     }),
   ],
   base: "./",
