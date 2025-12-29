@@ -13,28 +13,16 @@ export function Contact() {
     domain: string;
     className?: string;
   }) => {
-    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
-      window.location.href = `mailto:${user}@${domain}`;
-    };
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        window.location.href = `mailto:${user}@${domain}`;
-      }
-    };
-    const obfuscatedText = `${user} [at] ${domain.replace(".", " [dot] ")}`;
+    const emailText = `${user}@${domain}`;
     return (
       <a
-        href="#"
-        onClick={handleClick}
-        onKeyDown={handleKeyDown}
+        href={`mailto:${user}@${domain}`}
         className={className}
         rel="nofollow"
         aria-label={`Email ${user} at ${domain}`}
         title={`Send email to ${user}@${domain}`}
       >
-        {obfuscatedText}
+        {emailText}
       </a>
     );
   };
