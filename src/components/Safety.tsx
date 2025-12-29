@@ -13,10 +13,10 @@ export function Safety() {
         transition={{ duration: 0.6 }}
         className="w-full lg:w-1/2 flex flex-col gap-5"
       >
-        <h2 className="font-['Outfit'] font-semibold text-[30px] leading-[38px] text-white">
+        <h2 className="font-semibold text-[30px] leading-[38px]">
           Sikkerhed og arbejdsmiljø
         </h2>
-        <div className="font-['Inter'] font-normal text-[18px] leading-[28px] text-[#cecfd2] space-y-5">
+        <div className="font-normal text-[18px] leading-[28px] text-muted space-y-5">
           <p>
             Hos Dykerhverv er kompromisløs sikkerhed fundamentet for alle vores
             opgaver. Arbejde under vand indebærer altid risici, og derfor er

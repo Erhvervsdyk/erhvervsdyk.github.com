@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full bg-[#101d36] overflow-x-hidden">
+    <div className="min-h-screen w-full bg-base overflow-x-hidden">
       <Header />
 
       <main className="flex flex-col w-full">

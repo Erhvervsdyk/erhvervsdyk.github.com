@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export function Hero() {
   return (
-    <div className="relative w-full h-[816px] overflow-hidden flex flex-col items-center justify-center bg-[#101d36]">
+    <div className="relative w-full h-[816px] overflow-hidden flex flex-col items-center justify-center bg-base">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
@@ -32,10 +32,10 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-6 max-w-[768px]"
         >
-          <h1 className="font-['Outfit'] font-medium text-[40px] leading-[1.1] md:text-[100px] md:leading-[1.05] md:tracking-[-4px] text-white">
+          <h1 className="font-medium text-[40px] leading-[1.1] md:text-[100px] md:leading-[1.05] md:tracking-[-4px]">
             Professionelle erhvervsdykkere til alle behov
           </h1>
-          <p className="font-['Outfit'] font-normal text-[18px] md:text-[24px] leading-[1.4] text-[#cecfd2] max-w-[560px]">
+          <p className="font-normal text-[18px] md:text-[24px] leading-[1.4] text-muted max-w-[560px]">
             Vi er beliggende i Hovedstadsområdet og tilbyder erhvervsdykning til
             erhverv såvel som private.
           </p>
@@ -47,7 +47,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Button
-            className="bg-[#00aaaa] hover:bg-[#008888] text-white font-semibold text-[16px] rounded-[8px] px-6 py-3 h-auto font-['Inter'] shadow-sm"
+            className="bg-primary hover:bg-primary-hover text-on-color font-semibold text-[16px] rounded-[8px] px-6 py-3 h-auto shadow-sm"
             onClick={() =>
               document
                 .getElementById("contact")

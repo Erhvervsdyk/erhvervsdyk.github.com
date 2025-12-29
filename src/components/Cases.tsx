@@ -107,14 +107,14 @@ export function Cases() {
         className="flex flex-col gap-5 max-w-[768px]"
       >
         <div className="flex flex-col gap-3">
-          <p className="font-['Inter'] font-semibold text-[16px] leading-[24px] text-[#00cece]">
+          <p className="font-semibold text-[16px] leading-[24px] text-primary">
             Projekter
           </p>
-          <h2 className="font-['Outfit'] font-semibold text-[40px] md:text-[64px] leading-[1.05] tracking-[-1.28px] text-[#f5f5f6]">
+          <h2 className="font-semibold text-[40px] md:text-[64px] leading-[1.05] tracking-[-1.28px]">
             Seneste projekter
           </h2>
         </div>
-        <p className="font-['Inter'] font-normal text-[18px] md:text-[20px] leading-[30px] text-[#94969c]">
+        <p className="font-normal text-[18px] md:text-[20px] leading-[30px] text-muted">
           Fra komplekse inspektioner til akutte bjærgninger. Få et indblik i
           vores hverdag og se, hvordan vi løser krævende udfordringer for vores
           kunder.
@@ -215,16 +215,16 @@ export function Cases() {
               {activeIndex === index && (
                 <motion.div
                   layoutId="active-case-border"
-                  className="absolute left-[-4px] top-0 bottom-0 w-[4px] bg-[#00cece]"
+                  className="absolute left-[-4px] top-0 bottom-0 w-[4px] bg-primary"
                   initial={false}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
               <div className="flex flex-col gap-2">
-                <h3 className="font-['Inter'] font-semibold text-[20px] leading-[30px] text-[#f5f5f6]">
+                <h3 className="font-semibold text-[20px] leading-[30px]">
                   {item.title}
                 </h3>
-                <p className="font-['Inter'] font-normal text-[16px] leading-[24px] text-[#94969c]">
+                <p className="font-normal text-[16px] leading-[24px] text-muted">
                   {item.description}
                 </p>
               </div>

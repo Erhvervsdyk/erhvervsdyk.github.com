@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import svgPaths from "../imports/svg-wx2a8d09gh";
-import imgImage1 from "@/assets/services.avif";
+import imgServices from "@/assets/services.avif";
 
 const servicesList = [
   "Udarbejdelse af tilstandsrapporter",
@@ -57,14 +56,14 @@ export function Services() {
         className="flex flex-col gap-5 max-w-[768px] mx-auto text-center items-center"
       >
         <div className="flex flex-col gap-3 items-center w-full">
-          <p className="font-['Inter'] font-semibold text-[16px] leading-[24px] text-[#00cece]">
+          <p className="font-semibold text-[16px] leading-[24px] text-primary">
             Vi tilbyder
           </p>
-          <h2 className="font-['Outfit'] font-semibold text-[40px] md:text-[56px] leading-[1.05] tracking-[-1.12px] text-white">
+          <h2 className="font-semibold text-[40px] md:text-[56px] leading-[1.05] tracking-[-1.12px]">
             Komplette undervandsløsninger
           </h2>
         </div>
-        <p className="font-['Inter'] font-normal text-[18px] md:text-[20px] leading-[30px] text-[#cecfd2]">
+        <p className="font-normal text-[18px] md:text-[20px] leading-[30px] text-muted">
           Dykerhverv er specialiseret i en bred vifte af komplekse
           undervandsopgaver, fra tilstandsrapportering, inspektioner og
           undervandssvejsning, til kerneboring, specialmontage og bjærgning.
@@ -83,7 +82,7 @@ export function Services() {
         >
           <div className="relative w-full h-full overflow-hidden rounded-lg">
             <img
-              src={imgImage1}
+              src={imgServices}
               alt="En professionel erhvervsdykker udfører undervandssvejsning eller skæring på en stor metalpille. Dykkersættet er fuldt udstyret, og kraftige gnister lyser det mørke havvand op omkring arbejdsområdet."
               className="w-full h-full object-cover"
             />
@@ -103,10 +102,8 @@ export function Services() {
             >
               <CheckIcon className="mt-1" />
               <p
-                className={`font-['Inter'] text-[18px] leading-[28px] ${
-                  index < 4
-                    ? "font-bold text-white"
-                    : "font-normal text-[#98a2b3]"
+                className={`text-[18px] leading-[28px] ${
+                  index < 4 ? "font-bold" : "font-normal text-subtle"
                 }`}
               >
                 {item}
