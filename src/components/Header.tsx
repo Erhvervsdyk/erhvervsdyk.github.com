@@ -35,12 +35,6 @@ export function Header() {
           <Button
             variant="ghost"
             className="text-white text-[18px] font-medium hover:text-[#00cece] hover:bg-transparent p-0 h-auto"
-          >
-            Hjem
-          </Button>
-          <Button
-            variant="ghost"
-            className="text-white text-[18px] font-medium hover:text-[#00cece] hover:bg-transparent p-0 h-auto"
             onClick={() =>
               document
                 .getElementById("services")
@@ -58,7 +52,7 @@ export function Header() {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Projekter
+            Seneste projekter
           </Button>
         </div>
 
