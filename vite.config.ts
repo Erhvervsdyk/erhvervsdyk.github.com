@@ -22,7 +22,7 @@ export default defineConfig({
     tailwindcss(),
     react(),
     sitemap({
-      hostname: "https://erhvervsdyk.dk",
+      hostname: "https://www.erhvervsdyk.dk",
       dynamicRoutes: ["/"],
       outDir: "build",
       generateRobotsTxt: true,
