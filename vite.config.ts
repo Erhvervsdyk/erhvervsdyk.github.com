@@ -23,7 +23,6 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: "https://www.erhvervsdyk.dk",
-      dynamicRoutes: ["/"],
       outDir: "build",
       generateRobotsTxt: true,
     }),
