@@ -28,7 +28,7 @@ export default defineConfig({
       generateRobotsTxt: true,
     }),
   ],
-  base: "./",
+  base: "/",
   build: {
     outDir: "build",
     target: "esnext",
