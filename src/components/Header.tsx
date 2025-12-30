@@ -59,6 +59,7 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center">
           <Button
+            variant="plain"
             className="bg-[#00aaaa] hover:bg-[#008888] text-white font-semibold  rounded-[8px] px-4 py-2.5 h-auto"
             onClick={() =>
               document
@@ -136,6 +137,7 @@ export function Header() {
                   Cases
                 </a>
                 <Button
+                  variant="plain"
                   className="bg-[#00aaaa] hover:bg-[#008888] text-white font-semibold text-[16px] w-full"
                   onClick={() => {
                     document
