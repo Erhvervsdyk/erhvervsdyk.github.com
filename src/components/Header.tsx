@@ -15,8 +15,8 @@ function Logo() {
   return (
     <div className="flex items-start relative shrink-0 h-[32px]">
       {/* Logotype */}
-      <span className="text-white font-semibold text-2xl tracking-wide">
-        Dykerhverv
+      <span className="text-white font-semibold text-2xl tracking-tight">
+        DykErhverv
       </span>
     </div>
   );
