@@ -40,15 +40,19 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
+  --primary: rgba(0, 206, 206, 1);
+
   --text-base: #fff;
   --text-muted: rgba(255, 255, 255, 0.7);
   --text-subtle: rgba(255, 255, 255, 0.5);
-  --text-primary: rgba(0, 206, 206, 1);
+  --text-primary: var(--primary);
   --text-on-color: #fff;
 
   --bg-base: #0c111d;
-  --bg-primary: #00aaaa;
+  --bg-primary: var(--primary);
   --bg-primary-hover: #008888;
+
+  --border-primary: var(--primary);
 }
 
 .dark {

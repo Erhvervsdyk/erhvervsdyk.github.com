@@ -27,4 +27,7 @@
   .bg-primary-hover {
     background-color: var(--bg-primary-hover);
   }
+  .border-primary {
+    border-color: var(--border-primary);
+  }
 }

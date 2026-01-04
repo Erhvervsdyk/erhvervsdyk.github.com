@@ -31,6 +31,14 @@ function ArrowRight() {
 export function Cases() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [imageLoading, setImageLoading] = useState(true);
+  const loadingTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const isImageCached = (src: string) => {
+    const img = new Image();
+    img.src = src;
+    return img.complete;
+  };
 
   const cases = [
     {
@@ -59,15 +67,30 @@ export function Cases() {
   ];
 
   const handleCaseClick = (index: number) => {
-    setActiveIndex(index);
-    setActiveImageIndex(0);
+    if (index !== activeIndex) {
+      const nextImage = cases[index].images[0];
+      const isCached = isImageCached(nextImage);
+
+      if (!isCached) {
+        setImageLoading(true);
+      }
+      setActiveIndex(index);
+      setActiveImageIndex(0);
+    }
   };
 
   const handleNextImage = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     const currentImages = cases[activeIndex].images;
     if (currentImages.length > 1) {
-      setActiveImageIndex((prev) => (prev + 1) % currentImages.length);
+      const nextIndex = (activeImageIndex + 1) % currentImages.length;
+      const nextImage = currentImages[nextIndex];
+      const isCached = isImageCached(nextImage);
+
+      if (!isCached) {
+        setImageLoading(true);
+      }
+      setActiveImageIndex(nextIndex);
     }
   };
 
@@ -75,9 +98,15 @@ export function Cases() {
     e?.stopPropagation();
     const currentImages = cases[activeIndex].images;
     if (currentImages.length > 1) {
-      setActiveImageIndex(
-        (prev) => (prev - 1 + currentImages.length) % currentImages.length
-      );
+      const prevIndex =
+        (activeImageIndex - 1 + currentImages.length) % currentImages.length;
+      const prevImage = currentImages[prevIndex];
+      const isCached = isImageCached(prevImage);
+
+      if (!isCached) {
+        setImageLoading(true);
+      }
+      setActiveImageIndex(prevIndex);
     }
   };
 
@@ -150,13 +179,34 @@ export function Cases() {
                   dragElastic={0.2}
                   onDragEnd={handleDragEnd}
                 >
+                  {imageLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-[#0A1F2F] z-10 rounded-lg">
+                      <div className="w-10 h-10 border-4 border-primary border-t-transparent! rounded-full animate-spin" />
+                    </div>
+                  )}
                   <img
+                    key={`img-${caseIndex}-${activeImageIndex}`}
                     src={currentImage}
                     alt={`${item.title} - billede ${activeImageIndex + 1} af ${
                       item.images.length
                     }`}
-                    className="w-full h-full object-cover rounded-lg pointer-events-none"
-                    loading="lazy"
+                    className={`w-full h-full object-cover rounded-lg pointer-events-none transition-opacity duration-300 ${
+                      imageLoading ? "opacity-0" : "opacity-100"
+                    }`}
+                    onLoad={(e) => {
+                      // Check if image was already cached (loaded immediately)
+                      const img = e.currentTarget;
+                      if (img.complete && img.naturalHeight !== 0) {
+                        setImageLoading(false);
+                      }
+                    }}
+                    onError={() => setImageLoading(false)}
+                    ref={(img) => {
+                      // If image is already cached when component mounts, hide spinner immediately
+                      if (img && img.complete && img.naturalHeight !== 0) {
+                        setImageLoading(false);
+                      }
+                    }}
                   />
                 </motion.div>
               );
