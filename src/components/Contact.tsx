@@ -159,6 +159,7 @@ export function Contact() {
             src={imgContact}
             alt="Erhvervsdykker Rune Teit Strøm står klar i vandet til rådgivning om din næste undervandsopgave."
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </div>
       </motion.div>

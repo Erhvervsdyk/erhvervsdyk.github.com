@@ -53,6 +53,7 @@ export function Hero() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            aria-label="Gå til kontaktformular"
           >
             Kontakt os
           </Button>

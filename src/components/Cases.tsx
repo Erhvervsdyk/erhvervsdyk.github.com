@@ -152,8 +152,11 @@ export function Cases() {
                 >
                   <img
                     src={currentImage}
-                    alt={item.title}
-                    className="w-full h-full object-cover rounded-lg pointer-events-none" // pointer-events-none needed for drag to work smoothly
+                    alt={`${item.title} - billede ${activeImageIndex + 1} af ${
+                      item.images.length
+                    }`}
+                    className="w-full h-full object-cover rounded-lg pointer-events-none"
+                    loading="lazy"
                   />
                 </motion.div>
               );
@@ -166,14 +169,14 @@ export function Cases() {
               <button
                 onClick={handlePrevImage}
                 className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full text-white opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
-                aria-label="Previous image"
+                aria-label="Forrige billede"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={handleNextImage}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full text-white opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
-                aria-label="Next image"
+                aria-label="Næste billede"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -195,7 +198,12 @@ export function Cases() {
                       ? "bg-white w-4"
                       : "bg-white/50 hover:bg-white/80"
                   }`}
-                  aria-label={`Go to image ${dotIndex + 1}`}
+                  aria-label={`Gå til billede ${dotIndex + 1} af ${
+                    cases[activeIndex].images.length
+                  }`}
+                  aria-current={
+                    activeImageIndex === dotIndex ? "true" : "false"
+                  }
                 />
               ))}
             </div>
@@ -211,6 +219,16 @@ export function Cases() {
               className={`relative pl-6 py-4 flex flex-col gap-5 border-l-4 border-[#1f242f] cursor-pointer transition-colors hover:bg-white/5 ${
                 activeIndex === index ? "bg-white/5" : ""
               }`}
+              role="button"
+              tabIndex={0}
+              aria-label={`Vis projekt: ${item.title}`}
+              aria-pressed={activeIndex === index}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleCaseClick(index);
+                }
+              }}
             >
               {activeIndex === index && (
                 <motion.div

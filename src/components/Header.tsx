@@ -13,12 +13,20 @@ import { Menu, X } from "lucide-react";
 
 function Logo() {
   return (
-    <div className="flex items-start relative shrink-0 h-[32px]">
+    <a
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+      className="flex items-start relative shrink-0 h-[32px]"
+      aria-label="DykErhverv - Gå til forsiden"
+    >
       {/* Logotype */}
       <span className="text-white font-semibold text-2xl tracking-tight">
         DykErhverv
       </span>
-    </div>
+    </a>
   );
 }
 
@@ -40,6 +48,7 @@ export function Header() {
                 .getElementById("services")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            aria-label="Gå til services sektion"
           >
             Vi tilbyder
           </Button>
@@ -51,6 +60,7 @@ export function Header() {
                 .getElementById("cases")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            aria-label="Se seneste projekter"
           >
             Seneste projekter
           </Button>
@@ -66,6 +76,7 @@ export function Header() {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            aria-label="Gå til kontaktformular"
           >
             Kontakt os
           </Button>
@@ -78,6 +89,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 className="text-white p-1.5 h-12 w-12 hover:bg-white/10 hover:text-white"
+                aria-label="Åbn navigationsmenu"
               >
                 <Menu className="size-7" />
               </Button>
@@ -90,6 +102,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   className="absolute top-6 right-6 text-white p-1.5 h-auto w-auto"
+                  aria-label="Luk navigationsmenu"
                 >
                   <X className="size-12" />
                 </Button>

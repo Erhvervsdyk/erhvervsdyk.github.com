@@ -137,6 +137,20 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Enhanced focus visibility for accessibility */
+  *:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+  }
+
+  /* Ensure buttons and interactive elements have visible focus states */
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+  }
 }
 
 /**

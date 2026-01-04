@@ -85,6 +85,7 @@ export function Services() {
               src={imgServices}
               alt="En professionel erhvervsdykker udfører undervandssvejsning eller skæring på en stor metalpille. Dykkersættet er fuldt udstyret, og kraftige gnister lyser det mørke havvand op omkring arbejdsområdet."
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
         </motion.div>
