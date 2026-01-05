@@ -91,7 +91,7 @@ export function Services() {
         </motion.div>
 
         {/* List Side */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-5">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           {servicesList.map((item, index) => (
             <motion.div
               key={index}
@@ -103,8 +103,8 @@ export function Services() {
             >
               <CheckIcon className="mt-1" />
               <p
-                className={`text-[18px] leading-[28px] ${
-                  index < 4 ? "font-bold" : "font-normal text-subtle"
+                className={`text-[18px] leading-[24px] ${
+                  index < 4 ? "font-bold" : "font-normal text-muted"
                 }`}
               >
                 {item}

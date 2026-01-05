@@ -32,10 +32,10 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-6 max-w-[768px]"
         >
-          <h1 className="font-medium text-[40px] leading-[1.1] md:text-[100px] md:leading-[1.05] md:tracking-[-4px]">
+          <h1 className="font-medium text-[40px] leading-[1.1] md:text-[90px] md:leading-[1.05] md:tracking-[-4px]">
             Professionelle erhvervsdykkere til alle behov
           </h1>
-          <p className="font-normal text-[18px] md:text-[24px] leading-[1.4] text-muted max-w-[560px]">
+          <p className="font-normal text-[18px] md:text-[20px] leading-[1.4] text-muted max-w-[560px]">
             Vi er beliggende i Hovedstadsområdet og tilbyder erhvervsdykning til
             erhverv såvel som private.
           </p>
