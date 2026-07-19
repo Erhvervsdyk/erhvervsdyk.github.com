@@ -59,7 +59,7 @@ export function Cases() {
       images: [imgCaseC01],
     },
     {
-      title: "Bjærgning af skib på Refshalevej",
+      title: "Assistere bjærgning i samarbejde med <a href=\"https://share.google/NUBnt3tVYiMpBk8hJ\">Luckow Marine</a>",
       description:
         "Inspektion efter forlis, afpropning af skib og miljøhensyn. Efterfølgende bjærgning af skib. ",
       images: [imgCaseD01, imgCaseD02, imgCaseD03],
@@ -271,7 +271,7 @@ export function Cases() {
               }`}
               role="button"
               tabIndex={0}
-              aria-label={`Vis projekt: ${item.title}`}
+              aria-label={`Vis projekt: ${typeof item.title === 'string' ? item.title.replace(/<[^>]*>/g, '') : item.title}`}
               aria-pressed={activeIndex === index}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -289,9 +289,10 @@ export function Cases() {
                 />
               )}
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-[20px] leading-[30px]">
-                  {item.title}
-                </h3>
+                <h3
+                  className="font-semibold text-[20px] leading-[30px]"
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
                 <p className="font-normal text-[16px] leading-[24px] text-muted">
                   {item.description}
                 </p>
