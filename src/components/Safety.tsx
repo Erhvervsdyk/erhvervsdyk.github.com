@@ -41,7 +41,7 @@ export function Safety() {
       </motion.div>
 
       {/* Image Content */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -56,7 +56,7 @@ export function Safety() {
             loading="lazy"
           />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
