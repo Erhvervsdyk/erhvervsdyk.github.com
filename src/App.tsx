@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { ClientLogos } from "./components/ClientLogos";
 import { Services } from "./components/Services";
 import { Safety } from "./components/Safety";
 import { Cases } from "./components/Cases";
@@ -23,8 +24,9 @@ export default function App() {
       <main id="main-content" className="flex flex-col w-full">
         <Hero />
 
-        {/* Features Section (Services + Safety) - Dark Background */}
+        {/* Features Section (Client Logos + Services + Safety) - Dark Background */}
         <div className="bg-[rgb(4,12,21)] flex flex-col items-center w-full">
+          <ClientLogos />
           <Services />
           <Safety />
         </div>
